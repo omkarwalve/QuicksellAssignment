@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "./Card";
 const Colomn = (props) => {
+  console.log(props.Headings);
+  console.log(props.tickets);
   return (
     <>
       {props.Headings?.map((heading) => (
@@ -10,14 +12,16 @@ const Colomn = (props) => {
             <div className="custom-col">
               {props.tickets?.map((ticket) =>
                 ticket[props.options] === heading ? (
-                  <Card
-                    id={ticket.id}
-                    title={ticket.title}
-                    userid={ticket.userId}
-                    status={ticket.status}
-                    priority={ticket.priority}
-                    tag={ticket.tag}
-                  />
+                  <>
+                    <Card
+                      id={ticket.id}
+                      title={ticket.title}
+                      userid={ticket.userId}
+                      status={ticket.status}
+                      priority={ticket.priority}
+                      tag={ticket.tag}
+                    />
+                  </>
                 ) : (
                   <></>
                 )

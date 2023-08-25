@@ -17,7 +17,7 @@ const DisplayState = (props) => {
         "Ramesh",
         "Suresh",
       ]);
-      setshowOptions("users");
+      setshowOptions("userId");
     } else {
       setHeadings(["No priority", "Urgent", "High", "Medium", "Low"]);
       setshowOptions("priority");
